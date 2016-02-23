@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "react": "~0.14.7",
-    "material-design-lite": "~1.1.1"
+    "material-design-lite": "~1.1.1",
+    "material-design-icons": "~2.2.0"
   }
 }
