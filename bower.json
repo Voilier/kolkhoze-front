@@ -1,0 +1,21 @@
+{
+  "name": "kolkhoze-front",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pallamidessi/kolkhoze-front",
+  "authors": [
+    "pallamidessi <joseph.pallamidessi@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.7",
+    "material-design-lite": "~1.1.1"
+  }
+}
