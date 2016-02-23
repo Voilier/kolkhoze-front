@@ -25,3 +25,9 @@
 .login {
   margin-top: 120px;
 }
+
+.mdl-layout-title {
+  font-family: "et-book";
+  font-style: italic;
+  font-size: 2.7em;
+}
