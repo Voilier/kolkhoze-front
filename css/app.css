@@ -31,3 +31,11 @@
   font-style: italic;
   font-size: 2.7em;
 }
+
+.mdl-mini-footer {
+  padding: 18px 16px;
+}
+
+.login-header {
+  background-color: rgb(66, 66, 66) !important;
+}
