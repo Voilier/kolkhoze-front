@@ -39,3 +39,11 @@
 .login-header {
   background-color: rgb(66, 66, 66) !important;
 }
+
+.search-box-inventory {
+float: right;
+}
+
+.add-item {
+  margin-left: 24px;
+}

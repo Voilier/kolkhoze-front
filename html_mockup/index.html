@@ -47,64 +47,107 @@
 
 
     <main class="mdl-layout__content">
-
+      
       <div class="mdl-grid">
         
-        <div class="mdl-cell mdl-cell--6-col login">
+        <div class="mdl-cell mdl-cell--6-col">
+          <h4>My profile</h4>
           <span class="mdl-list__item-primary-content">
             <i class="material-icons mdl-list__item-avatar">person</i>
             <span>My Full Name</span>
           </span>
         </div>
-
-        <div class="mdl-cell mdl-cell--4-col login">
-          <h2>Inventory</h2>
-
-          <ul class="demo-list-two mdl-list">
-            <li class="mdl-list__item mdl-list__item--two-line">
-              <span class="mdl-list__item-primary-content">
-                  <i class="material-icons mdl-list__item-avatar">book</i>
-                  <span>Le rouge et le noir - Stendhal</span>
-              <span class="mdl-list__item-sub-title">To <a href="/user/jeanpont">Jean Pont</a></span>
-              </span>
-              <span class="mdl-list__item-secondary-content">
-                  <span class="mdl-list__item-secondary-info">Lent ?</span>
-              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
-              </label>
-              </span>
-            </li>
-            <li class="mdl-list__item mdl-list__item--two-line">
-              <span class="mdl-list__item-primary-content">
-                  <i class="material-icons mdl-list__item-avatar">movie</i>
-                  <span>Apollo Creed</span>
-                  <span class="mdl-list__item-sub-title"></span>
-              </span>
-              <span class="mdl-list__item-secondary-content">
-                  <span class="mdl-list__item-secondary-info">Lent ?</span>
-              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
-                <input type="checkbox" id="switch-2" class="mdl-switch__input" />
-              </label>
-              </span>
-            </li>
-            <li class="mdl-list__item mdl-list__item--two-line">
-              <span class="mdl-list__item-primary-content">
-                  <i class="material-icons mdl-list__item-avatar">help</i>
-                  <span>Sony Reflex</span>
-                  <span class="mdl-list__item-sub-title">To <a href="/user/jeanpont">Jean Pont</a></span>
-              </span>
-              <span class="mdl-list__item-secondary-content">
-                  <span class="mdl-list__item-secondary-info">Lent ?</span>
-              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-3">
-                <input type="checkbox" id="switch-3" class="mdl-switch__input" checked />
-              </label>
-              </span>
-            </li>
+        
+        <div class="mdl-cell mdl-cell--6-col">
+          <h4>Stats</h4>
+          <ul>
+            <li><span class="kh-bold-ital">Total sharing: </span> 67</li>
+            <li><span class="kh-bold-ital">Current shared items: </span> 12 </li>
+            <li><span class="kh-bold-ital">Current borrowing : </span> 23 </li>
           </ul>
         </div>
 
-
       </div>
+
+      <div class="mdl-grid">
+        
+        <div class="mdl-cell mdl-cell--6-col">
+          <h2 style="display:inline-block">Inventory</h2>
+
+          <form action="#" class="search-box-inventory">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+
+              <input class="mdl-textfield__input" type="text" id="sample3">
+              <label class="mdl-textfield__label" for="sample3"><i class="material-icons">search</i>Search</label>
+
+            </div>
+          </form>
+
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar">
+                <a href="#all-panel" class="mdl-tabs__tab is-active">All</a>
+                <a href="#lent-panel" class="mdl-tabs__tab">Lent items</a>
+                <a href="#borrow-panel" class="mdl-tabs__tab">Borrowed items</a>
+            </div>
+
+            <div class="mdl-tabs__panel is-active" id="all-panel">
+               <ul class="demo-list-two mdl-list">
+                <li class="mdl-list__item mdl-list__item--two-line">
+                  <span class="mdl-list__item-primary-content">
+                      <i class="material-icons mdl-list__item-avatar">book</i>
+                      <span>Le rouge et le noir - Stendhal</span>
+                  <span class="mdl-list__item-sub-title">To <a href="/user/jeanpont">Jean Pont</a></span>
+                  </span>
+                  <i class="material-icons">mode edit</i>
+                  <span class="mdl-list__item-secondary-content">
+                      <span class="mdl-list__item-secondary-info">Lent ?</span>
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                    <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
+                  </label>
+                  </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--two-line">
+                  <span class="mdl-list__item-primary-content">
+                      <i class="material-icons mdl-list__item-avatar">movie</i>
+                      <span>Apollo Creed</span>
+                      <span class="mdl-list__item-sub-title"></span>
+                  </span>
+                  <i class="material-icons">mode edit</i>
+                  <span class="mdl-list__item-secondary-content">
+                      <span class="mdl-list__item-secondary-info">Lent ?</span>
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                    <input type="checkbox" id="switch-2" class="mdl-switch__input" />
+                  </label>
+                  </span>
+                </li>
+                <li class="mdl-list__item mdl-list__item--two-line">
+                  <span class="mdl-list__item-primary-content">
+                      <i class="material-icons mdl-list__item-avatar">help</i>
+                      <span>Sony Reflex</span>
+                      <span class="mdl-list__item-sub-title">To <a href="/user/jeanpont">Jean Pont</a></span>
+                  </span>
+                  <i class="material-icons">mode edit</i>
+                  <span class="mdl-list__item-secondary-content">
+                      <span class="mdl-list__item-secondary-info">Lent ?</span>
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-3">
+                    <input type="checkbox" id="switch-3" class="mdl-switch__input" checked />
+                  </label>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="mdl-tabs__panel" id="lent-panel">
+            </div>
+            <div class="mdl-tabs__panel" id="borrow-panel">
+            </div>
+          </div>
+        </div>
+      <!-- Colored FAB button with ripple -->
+      </div>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect
+        mdl-button--colored add-item">
+        <i class="material-icons">add</i>
+      </button>
     </main>
 
     <footer class="mdl-mini-footer">
