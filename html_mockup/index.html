@@ -15,7 +15,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css">
 
+  <script src="../bower_components/dialog-polyfill/dialog-polyfill.js"></script>
+  <link rel="stylesheet" type="text/css" href="../bower_components/dialog-polyfill/dialog-polyfill.css" />
+  
   <script type="text/javascript" src="../bower_components/material-design-lite/material.js"></script>
+  <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="../js/app.js"></script>
 </head>
 
 <body>
@@ -53,8 +58,9 @@
         <div class="mdl-cell mdl-cell--6-col">
           <h4>My profile</h4>
           <span class="mdl-list__item-primary-content">
-            <i class="material-icons mdl-list__item-avatar">person</i>
-            <span>My Full Name</span>
+            <i class="material-icons mdl-list__item-avatar profile-photo">person</i>
+            <img class="profile-photo-real" src="" style="display:none"></img>
+            <span class="profile-name">My Full Name</span>
           </span>
         </div>
         
@@ -99,6 +105,7 @@
                   <span class="mdl-list__item-sub-title">To <a href="/user/jeanpont">Jean Pont</a></span>
                   </span>
                   <i class="material-icons">mode edit</i>
+                  <i class="material-icons delete-item">close</i>
                   <span class="mdl-list__item-secondary-content">
                       <span class="mdl-list__item-secondary-info">Lent ?</span>
                   <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
@@ -113,6 +120,7 @@
                       <span class="mdl-list__item-sub-title"></span>
                   </span>
                   <i class="material-icons">mode edit</i>
+                  <i class="material-icons delete-item">close</i>
                   <span class="mdl-list__item-secondary-content">
                       <span class="mdl-list__item-secondary-info">Lent ?</span>
                   <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
@@ -127,6 +135,7 @@
                       <span class="mdl-list__item-sub-title">To <a href="/user/jeanpont">Jean Pont</a></span>
                   </span>
                   <i class="material-icons">mode edit</i>
+                  <i class="material-icons delete-item">close</i>
                   <span class="mdl-list__item-secondary-content">
                       <span class="mdl-list__item-secondary-info">Lent ?</span>
                   <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-3">
@@ -144,11 +153,37 @@
         </div>
       <!-- Colored FAB button with ripple -->
       </div>
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect
+      <button id="addItemButton" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect
         mdl-button--colored add-item">
         <i class="material-icons">add</i>
       </button>
     </main>
+    
+    <dialog class="mdl-dialog">
+      <h4 class="mdl-dialog__title">Allow data collection?</h4>
+      <div class="mdl-dialog__content">
+        <p>
+          Allowing us to collect data will let us get you the information you want faster.
+        </p>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input newItemName" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Name of item</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input newItemLink" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">To/From</label>
+        </div>
+        <span class="mdl-list__item-secondary-info">Lent ?</span>
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                    <input type="checkbox" id="switch-2" class="mdl-switch__input" />
+                  </label>
+
+      </div>
+      <div class="mdl-dialog__actions">
+        <button type="button" class="mdl-button accept">Agree</button>
+        <button type="button" class="mdl-button close">Disagree</button>
+      </div>
+    </dialog>
 
     <footer class="mdl-mini-footer">
       <div class="mdl-mini-footer__left-section">

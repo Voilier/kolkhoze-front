@@ -47,3 +47,14 @@ float: right;
 .add-item {
   margin-left: 24px;
 }
+
+.circle-avatar {
+  width:128px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-box-shadow: 10px 7px 14px -8px rgba(0,0,0,0.61);
+  -moz-box-shadow: 10px 7px 14px -8px rgba(0,0,0,0.61);
+  box-shadow: 10px 7px 14px -8px rgba(0,0,0,0.61);
+}
