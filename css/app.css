@@ -48,6 +48,14 @@ float: right;
   margin-left: 24px;
 }
 
+.mdl-layout__header-row {
+  height: 128px;
+}
+
+.logo {
+  height: 100%;
+}
+
 .circle-avatar {
   width:128px;
   -webkit-border-radius: 50%;
